@@ -11,6 +11,6 @@ var path = require('path');
 var resolve = path.resolve;
 
 // Little hack to include `NODE_PATH=.`
-// require('node-path')(module, [resolve('.')]);
+require('node-path')(module, [resolve('.')]);
 
 var builder = build.build();
