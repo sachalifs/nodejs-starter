@@ -35,7 +35,7 @@ var mkdir = require('mkdirp');
 
 mkdir('public');
 var js = new Duo(process.cwd());
-var css = new Duo(process.cwd() + '/lib/boot');
+var css = new Duo(process.cwd() + '/lib');
 js
   .entry('lib/boot/boot.js')
   .use(jade)
@@ -46,9 +46,10 @@ js
   });
 
 css
-  .entry('index.styl')
+  .entry('boot/index.styl')
   .use(stylus)
-  .assets('../../public')
+  .assets('../public')
+  .copy(true)
   .run(function (err, res) {
     if (err) return console.log(err), process.exit(1);
 
