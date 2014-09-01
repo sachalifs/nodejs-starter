@@ -50,6 +50,11 @@
     "merge-util": "0.1.0",
     "node-path": "0.0.3",
     "crypto": "0.0.3",
-    "debug": "~0.7.4"
+    "debug": "~0.7.4",
+
+    "duo": "0.8.2",
+    "duo-stylus": "0.0.1",
+    "duo-jade": "0.0.5",
+    "mkdirp": "0.5.0"
   }
 }
