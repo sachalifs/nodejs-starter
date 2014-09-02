@@ -45,11 +45,15 @@
     "string-to-js": "0.0.1",
     "commander": "~2.0.0",
     "component-stylus-plugin": "~0.2.3",
-    "component": "~0.19.5",
-    "component-builder": "~0.10.1",
+    "component": "1.0.0-rc5",
+    "component-builder": "1.1.10",
+    "component-resolver": "1.1.8",
     "merge-util": "0.1.0",
     "node-path": "0.0.3",
     "crypto": "0.0.3",
-    "debug": "~0.7.4"
+    "debug": "~0.7.4",
+    "mkdirp": "0.5.0",
+    "builder-jade": "1.0.1",
+    "stylus": "0.48.1"
   }
 }
