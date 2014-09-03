@@ -44,11 +44,13 @@ resolve(process.cwd(), {
 
   build.scripts(tree)
     .use('scripts', build.plugins.js())
-    .use('templates', build.plugins.string())
-    .use('jade', jade({runtime: true}))
+    .use('templates', jade({
+      string: false,
+      runtime: true
+    }))
     .end(function (err, js) {
       if (err) throw err;
-      write('public/app.js', build.scripts.require + js);
+      write('public/app.js', build.scripts.require + jade.runtime + js);
     });
 
   build.styles(tree)
@@ -58,5 +60,9 @@ resolve(process.cwd(), {
       if (err) throw err;
       fs.writeFileSync('public/app.css', string);
     });
+
+  build.files(tree, {destination: 'public'})
+    .use('images', build.plugins.copy())
+    .end();
 
 })
