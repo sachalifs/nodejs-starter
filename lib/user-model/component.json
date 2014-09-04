@@ -5,7 +5,7 @@
     "component/emitter": "1.1.2",
     "visionmedia/superagent": "0.18.0"
   },
-  "local": [],
+  "locals": [],
   "scripts": [ "model.js" ],
   "main": "model.js",
   "license": "MIT"
